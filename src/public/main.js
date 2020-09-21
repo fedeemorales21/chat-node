@@ -33,11 +33,13 @@ const login = () => {
 
 form.addEventListener('submit', e =>{
     e.preventDefault()
-    socket.emit('msg',{
-        username: sessionStorage.getItem('chatName'),
-        message: form['message'].value
-    })
-    form['message'].value = ''
+    if (form['message'].value != '') {
+        socket.emit('msg',{
+            username: sessionStorage.getItem('chatName'),
+            message: form['message'].value
+        })
+        form['message'].value = ''
+    }
 })
 
 form['message'].addEventListener('keypress', () =>{
