@@ -1,0 +1,46 @@
+body{
+    background-color: lightsteelblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#containerChat{
+    display: none;
+}
+
+#windowChat{
+    width: 100%;
+    height: 500px;
+}
+
+#containerChat input.btn.btn-primary.btn-block {
+    height: 100%;
+}
+
+textarea{
+    resize: none;
+}
+
+#output{
+    width: 100%;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+#output::-webkit-scrollbar {
+	width: 7px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+	background: dodgerblue;
+}
+
+#output p,#actions p{
+    color: black;
+}
+
+#actions{
+    width: 100%;
+    height: 50px;
+}
+

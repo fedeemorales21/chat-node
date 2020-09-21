@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 card card-body mt-5 shadow rounded">
+                
+                <form id="formLogin">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Name" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <button id="btnLogin" class="btn btn-primary btn-block">LOGIN</button>
+                    </div>
+
+                </form>
+                
+                <div id="containerChat">
+                    <div id="windowChat">
+                        <div id="output"></div>
+                        <div id="actions"></div>
+                    </div>
+                    <form id="sendMsg" class="row">     
+                        <div class="col-md-9">
+                            <textarea id="message" placeholder="Message" class="form-control"></textarea>
+                        </div>                   
+                        <div class="col-md-3">
+                            <input type="submit" class="btn btn-primary btn-block" value="SEND">
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
